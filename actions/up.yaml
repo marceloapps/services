@@ -1,0 +1,44 @@
+---
+  name: "up"
+  runner_type: "python-script"
+  description: "Action para levantar um serviço no host."
+  enabled: true
+  entry_point: "servicemanager.py"
+  parameters:
+    host:
+      type: "string"
+      description: "Hostname de destino"
+      required: true
+      position: 0
+    servicename:
+      type: "string"
+      description: "Nome do serviço que será levantado"
+      required: true
+      default: false
+      position: 1
+    status:
+      type: "string"
+      description: "Status final do serviço"
+      required: true
+      default: "start"
+      position: 2
+    is_cloud:
+      type: "boolean"
+      description: "Informe se a máquina é da cloud privada ou não"
+      required: true
+      position: 3
+    user: 
+      type: "string"
+      description: "Informe user caso não seja cloud"
+      required: false
+      position: 4
+    password:
+      type: "string"
+      description: "Informe a senha caso não seja cloud"
+      required: false
+      position: 5
+    port:
+      type: "string"
+      description: "Informe a porta SSH caso não seja cloud"
+      required: false
+      position: 6

@@ -1,0 +1,9 @@
+---
+name : services
+description : Basic service (up/down) actions.
+version : 1.0.1
+python_versions:
+  - "2"
+  - "3"
+author : Marcelo Arakaki Guimaraes.
+email : marcelo.arakaki@gmail.com
